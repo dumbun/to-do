@@ -14,7 +14,7 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   Future logout() async {
     await FirebaseAuth.instance.signOut();
-    Navigator.of(context).pushNamed("/login/");
+    Navigator.of(context).pushNamedAndRemoveUntil("/login/", (route) => false);
   }
 
   @override
@@ -22,7 +22,11 @@ class _MainPageState extends State<MainPage> {
     TextEditingController userNewEntry = TextEditingController();
     return Scaffold(
       drawer: Drawer(
-        child: IconButton(onPressed: logout, icon: Icon(Icons.logout)),
+        child: TextButton.icon(
+          label: const Text("logout"),
+          onPressed: logout,
+          icon: const Icon(Icons.logout),
+        ),
       ),
       appBar: AppBar(
         title: const Text("To-Do"),
