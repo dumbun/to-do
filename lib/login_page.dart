@@ -20,7 +20,7 @@ class _LoginPageState extends State<LoginPage> {
   //// login function
   Future login() async {
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
         email: _emailController.text,
         password: _passwordController.text,
       );
