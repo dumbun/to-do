@@ -1,5 +1,7 @@
 # to_do
 
+Just a to do list app
+
 A new Flutter project.
 
 ## Getting Started
