@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:to_do/constants.dart';
 import 'package:to_do/modules/data.dart';
 import 'package:to_do/widgets/check_box_widget.dart';
-import 'constants.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});
